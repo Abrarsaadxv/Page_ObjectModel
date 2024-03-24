@@ -18,14 +18,16 @@ public class Ebaypage {
     @FindBy(id = "gh-btn'")
     public WebElement serchbuttone;
     //@FindBy(xpath = "(//li[contains(@class, 's-item')])[2]")
-    @FindBy(xpath = "//*[@id='srp-river-results']/ul/li[1]")
-    public WebElement Firstelemnt;
-
-    @FindBy(id ="gh-minicart-hover")
-   public WebElement Cart ;
-   @FindBy(partialLinkText = "Add to cart")
-   public WebElement addToCart ;
-
+    // @FindBy(xpath = "//*[@id='srp-river-results']/ul/li[1]")
+//    @FindBy(xpath = "(//div[@class='s-item__title'])[2]")
+//    public WebElement Firstelemnt;
+    //(//div[@class='s-item__title'])[2]
+    @FindBy(xpath = "(//div[@class='s-item__title'])[3]")
+    public WebElement Firstelemnt ;
+    @FindBy(id = "gh-minicart-hover")
+    public WebElement Cart;
+    @FindBy(partialLinkText = "Add to cart")
+    public WebElement addToCart;
 
 
 //   @FindBy(xpath = "//*[@class='s-item s-item__pl-on-bottom'][2]")
@@ -37,7 +39,6 @@ public class Ebaypage {
 //    }
 
 
-
 //    public void clickFirstElement() {
 //        if (Firstelemnt.getText().contains(" Cloth Myth Golden Saint")) {
 //            Firstelemnt.click();
@@ -46,6 +47,7 @@ public class Ebaypage {
 //            Secoundelemnt.click();
 //        }
 //    }
+
 }
 
 

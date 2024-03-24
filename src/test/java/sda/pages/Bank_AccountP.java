@@ -154,6 +154,8 @@ public WebElement Withdrawbutton;
        // Assert.assertTrue(SWithdrawl.isDisplayed());
 
     }
+    @FindBy(xpath = "//*[@ng-show='logout']")
+    public WebElement logouttebutton2;
 
 
 

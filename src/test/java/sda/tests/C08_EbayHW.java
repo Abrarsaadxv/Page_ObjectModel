@@ -19,12 +19,10 @@ public class C08_EbayHW {
         Driver.getDriver().get(ConfigReader.getProperty("ebayurl"));
         ebaypage.searchbox.sendKeys(ConfigReader.getProperty("searchword") + Keys.ENTER);
         Thread.sleep(1000);
-        ebaypage.Firstelemnt.click();
+ebaypage.Firstelemnt.click();
+        Thread.sleep(1000);
 
-
-//ebaypage.addToCart.click();
-//  ebaypage.Cart.click();
-
-
-    }
-}
+ebaypage.addToCart.click();
+        Thread.sleep(1000);
+        ebaypage.Cart.click();
+                }}
