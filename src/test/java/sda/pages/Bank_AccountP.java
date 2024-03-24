@@ -6,6 +6,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 import sda.utilities.Driver;
 
 import javax.swing.*;
@@ -115,6 +116,48 @@ public class Bank_AccountP {
     public WebElement customerLogin;
     @FindBy(id="userSelect")
     public WebElement Name;
+
+    @FindBy(xpath="//*[@type='submit']")
+    public WebElement Loginbutton1;
+
+    @FindBy(xpath = "//*[@class='btn btn-lg tab'][2]")
+    public WebElement Deposit;
+
+    @FindBy(xpath ="//*[@placeholder='amount']")
+    public WebElement amountDeposited;
+
+
+    @FindBy(xpath = "//*[@ng-show='message']")
+    public WebElement  Successful;
+
+    public void  SuccessfulDeposit() throws InterruptedException {
+        Thread.sleep(1000);
+        Assert.assertTrue(Successful.isDisplayed());
+
+    }
+    @FindBy(xpath = "//*[@ng-class='btnClass3']")
+    public WebElement Withdrawl;
+
+@FindBy(xpath = "//*[@placeholder='amount']")
+   // @FindBy(xpath = "//*[@placeholder='amount']")
+    public WebElement withdrawamount;
+
+    @FindBy(xpath = "//*[@ng-show='message']")
+    public WebElement SWithdrawl;
+
+@FindBy (xpath = "//*[@type='submit']")
+public WebElement Withdrawbutton;
+    public void  SuccessfSWithdrawl() throws InterruptedException {
+        withdrawamount.sendKeys("100");
+       // Withdrawbutton.click();
+        Thread.sleep(1000);
+       // Assert.assertTrue(SWithdrawl.isDisplayed());
+
+    }
+
+
+
+
 
 
 }

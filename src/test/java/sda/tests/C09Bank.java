@@ -3,8 +3,10 @@ package sda.tests;
 import com.github.javafaker.Faker;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 import sda.pages.Bank_AccountP;
@@ -88,41 +90,50 @@ public class C09Bank {
         //    Click on "Customer Login" button
         bankAccountP.customerLogin.click();
         //    Click on "Your Name" dropdown
-bankAccountP.Name.click();
 
-
-        //And
+//bankAccountP.Name.click();
         //    Select the any name you created
-        //And
+        Select selectName =  new Select(bankAccountP.Name);
+        selectName.selectByIndex(2);
+
         //    Click on "Login" button
-        //And
+bankAccountP.Loginbutton1.click();
+
+
         //    Click on "Deposit" button
-        //And
+
+        bankAccountP.Deposit.click();
         //    Type 100 into "Amount to be Deposited" input
-        //And
         //    Click on "Deposit"(Submit) button
-        //Then
+
+        bankAccountP.amountDeposited.sendKeys("100"+ Keys.ENTER);
         //    Assert that "Deposit Successful" is displayed
-        //And
+        bankAccountP.SuccessfulDeposit();
+
         //    Click on "Withdrawal" button
-        //And
-        //    Type 100 into "Amount to be Withdrawn" input
-        //And
+        bankAccountP.Withdrawl.click();
+
+    //    Type 100 into "Amount to be Withdrawn" input
+
         //    Click on "Withdraw"(Submit) button
-        //Then
+
+      bankAccountP.SuccessfSWithdrawl();
         //    Assert that "Transaction  Successful" is displayed
         //When
         //    Click on "Logout" button
-        //And
+
+
         //    Click on "Home" button
-        //And
+
+
         //    Click on "Bank Manager Login" button
-        //And
+
+
         //    Click on "Customers" button
-        //And
+
         //    Click on each "Delete" button
-        //And
+
         //    Count table row numbers
         //Then
-        //    As
+
     }}
