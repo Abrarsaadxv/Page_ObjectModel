@@ -23,6 +23,5 @@ ebaypage.Firstelemnt.click();
         Thread.sleep(1000);
 
 ebaypage.addToCart.click();
-        Thread.sleep(1000);
-        ebaypage.Cart.click();
+//        ebaypage.Cart.click();
                 }}
